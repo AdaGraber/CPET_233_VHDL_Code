@@ -1,0 +1,16 @@
+LIBRARY IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+ENTITY lab6 IS
+    PORT(set_n, clk, reset_n, S : in STD_LOGIC;
+	      HEX2, HEX1, HEX0 : OUT STD_LOGIC_VECTOR(6 downto 0)
+			);
+END lab6;
+
+ARCHITECTURE counter OF lab6 IS
+    COMPONENT delay_unit IS
+	     PORT(max_value, clk, reset_n : IN STD_LOGIC;
+		       flag : out STD_LOGIC
+				 );

@@ -1,0 +1,17 @@
+LIBRARY IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+ENTITY hex_displayer IS
+	  PORT(in_HEX : in STD_LOGIC_VECTOR(9 downto 0);
+		    HEX2, HEX1, HEX0 : out STD_LOGIC_VECTOR (6 downto 0)
+			 );
+END hex_displayer;
+
+ARCHITECTURE behave OF hex_displayer IS
+
+BEGIN
+
+
+END behave;

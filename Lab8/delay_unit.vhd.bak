@@ -1,0 +1,10 @@
+LIBRARY IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+ENTITY delay_unit IS
+    PORT(max_value : UNSIGNED(19 downto 0);
+	      clk, reset_n : IN STD_LOGIC;
+			flag : OUT STD_LOGIC
+			);

@@ -1,0 +1,56 @@
+S:/Classes/DSD/Lab8/lab8.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none S:/Classes/DSD/Lab8/lab8.vhd
+Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity lab8
+-- Compiling architecture timer of lab8
+
+} {} {}} S:/Classes/DSD/Lab8/counter.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none S:/Classes/DSD/Lab8/counter.vhd
+Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity counter
+-- Compiling architecture behave of counter
+
+} {} {}} S:/Classes/DSD/Lab8/hex_displayer.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none S:/Classes/DSD/Lab8/hex_displayer.vhd
+Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity hex_displayer
+-- Compiling architecture behave of hex_displayer
+
+} {} {}} S:/Classes/DSD/Lab8/timer_tb.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none {S:\Classes\DSD\Lab8\timer_tb.vhd}
+Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity timer_tb
+-- Compiling architecture test of timer_tb
+
+} {} {}} S:/Classes/DSD/Lab8/delay_unit.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none S:/Classes/DSD/Lab8/delay_unit.vhd
+Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity delay_unit
+-- Compiling architecture behave of delay_unit
+
+} {} {}}
