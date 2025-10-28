@@ -1,0 +1,43 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity lab6 IS 
+	PORT(in_num : in std_logic_vector(7 downto 0);
+	     HEX3, HEX2, HEX1, HEX0 : out std_logic_vector(6 downto 0)
+		  );
+end lab6;
+
+ARCHITECTURE decimal_displayer OF lab6 IS 
+    signal abs_value : std_logic_vector(7 downto 0);
+BEGIN
+
+-- check if negative number or not
+		neg_check : PROCESS(in_num)
+		BEGIN
+			IF (in_num(7) = '0') THEN
+			    HEX3 <= "1111111";
+			ELSE HEX3 <= "0111111";
+		END IF;
+		END PROCESS;
+
+		
+		-- get absolute value of the number
+		abs_val : PROCESS (in_num)
+		BEGIN
+		    IF(in_num(7) = '1') THEN
+				abs_value <= not(in_num) + 1;
+			 ELSE abs_value <= in_num;
+		END IF;
+		END PROCESS;
+		
+		--display HEX2
+		
+		
+		--display HEX1
+		
+		
+		--display HEX0
+		
+END decimal_displayer;

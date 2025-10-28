@@ -1,0 +1,72 @@
+-------------------------------------------------------------------------------
+-- Prof Dickens
+-- Conditional Signal Assignment Example
+-------------------------------------------------------------------------------
+ 
+ -- Libraries 
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+entity review is
+  port (
+    w, x, y, z  : in  std_logic; 
+	a_sel, b_sel, c_sel, d_sel, e_sel, f_sel, g_sel : out std_logic;
+    a_cond, b_cond, c_cond, d_cond, e_cond, f_cond, g_cond          : out std_logic
+  );  
+end review;  
+
+architecture behave of review  is
+
+signal inputs : std_logic_vector(3 downto 0);
+signal sel_inputs : std_logic_vector(3 downto 0);
+
+begin
+
+--select inputs design 
+    sel_inputs <= w & x & y & z;
+	WITH sel_inputs select
+	    a_sel <= '1' WHEN "0010" | "0100" | "0101" | "1001",
+		         '0' WHEN OTHERS;   
+	WITH sel_inputs select
+	    b_sel <= '1' WHEN "0010" | "0101",
+		         '0' WHEN OTHERS;   
+	WITH sel_inputs select
+	    c_sel <= '1' WHEN "0010" | "0100" | "0101" | "1001",
+		         '0' WHEN OTHERS;   
+	WITH sel_inputs select
+	    d_sel <= '1' WHEN "0010" | "0011" | "0101" | "0110",
+		         '0' WHEN OTHERS;   
+	WITH sel_inputs select
+	    e_sel <= '1' WHEN "0001" | "0010" | "0100" | "0101" | "1001",
+		         '0' WHEN OTHERS;   
+	WITH sel_inputs select
+	    f_sel <= '1' WHEN "0010" | "0011" | "0100" | "0101" | "0110",
+		         '0' WHEN OTHERS;   
+	WITH sel_inputs select
+	    g_sel <= '1' WHEN "0000" | "0100" | "0111" | "1000",
+		         '0' WHEN OTHERS;   
+				 
+				 
+-- cond inputs design
+   inputs <= w & x & y & z; -- concatenation combines bits into a vector
+
+   g_cond <= '1' WHEN inputs = "0000" or inputs = "0100" or inputs = "0111" or inputs = "1000" ELSE
+          '0';
+   f_cond <= '1' WHEN inputs = "0010" or inputs = "0011" or inputs = "0100" or inputs = "0101" or inputs = "0110" ELSE
+        '0';
+   e_cond <= '1' WHEN inputs = "0001" or inputs = "0010" or inputs = "0100" or inputs = "0101" or inputs = "1001" ELSE
+        '0';
+   d_cond <= '1' WHEN inputs = "0001" or inputs = "0010" or inputs = "0101" or inputs = "0101" or inputs = "1001" ELSE
+        '0';
+   c_cond <= '1' WHEN inputs = "0010" or inputs = "0011" or inputs = "0101" or inputs = "0110" ELSE
+        '0';
+   b_cond   <= '1' WHEN inputs = "0010" or inputs = "0101" ELSE
+        '0';
+   a_cond <= '1' WHEN inputs = "0010" or inputs = "0100" or inputs = "0101" or inputs = "1001" ELSE
+        '0';
+          
+   
+
+end behave;
+

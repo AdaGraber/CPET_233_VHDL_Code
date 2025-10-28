@@ -1,0 +1,16 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY result_maker IS
+    PORT(in_A, in_B : IN STD_LOGIC_VECTOR (3 downto 0);
+		   in_OP : IN STD_LOGIC_VECTOR (1 downto 0);
+		   H0O, H1O, H2O, H3O : out STD_LOGIC_VECTOR (6 downto 0)
+			);
+END result_maker;
+
+ARCHITECTURE output OF result_maker IS
+
+BEGIN
+
+
+END output;

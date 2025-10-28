@@ -1,0 +1,20 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY lab7 IS
+    PORT (A, B : in STD_LOGIC_VECTOR(3 downto 0);
+	       OP : in STD_LOGIC_VECTOR (1 downto 0);
+			 HEX0, HEX1, HEX2, HEX3 : out STD_LOGIC_VECTOR(6 downto 0)
+			 );
+END lab7;
+
+ARCHITECTURE calculator OF lab7 IS
+
+SIGNAL 
+
+    COMPONENT result_maker IS
+	     PORT(A => in_A,
+		       B => in_B,
+				 Op => in_Op,
+				 )
+	 END COMPONENT;

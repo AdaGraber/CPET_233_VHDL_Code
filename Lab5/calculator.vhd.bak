@@ -1,0 +1,27 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+ENTITY calculator IS 
+    Port(
+	       A, B : IN STD_LOGIC_VECTOR(3 downto 0); 
+			 OP : IN STD_LOGIC_VECTOR(1 downto 0);
+			 R : OUT STD_LOGIC_VECTOR(7 downto 0)
+			 );
+
+END calculator;
+
+ARCHITECTURE calc OF calculator IS
+BEGIN
+
+--mode selection
+    op_sel : PROCESS(OP, A, B)
+	 BEGIN
+	     CASE OP IS
+		      WHEN "00" => R <= (A + B);
+				WHEN "01" => R <= (A - B);
+				WHEN "10" => R <= (A*B);
+				WHEN "11" => R <= (A/B);
+		  END CASE;
+	 END PROCESS;
+END calc;

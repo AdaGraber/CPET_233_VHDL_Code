@@ -1,0 +1,14 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY hex_displayer IS
+	     PORT(in_HEX : in STD_LOGIC_VECTOR(6 downto 0);
+		       out_HEX : out STD_LOGIC_VECTOR (6 downto 0)
+				 );
+END hex_displayer;
+
+ARCHITECTURE output OF hex_displayer IS
+
+
+
+END output;

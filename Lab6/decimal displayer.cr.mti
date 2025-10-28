@@ -1,0 +1,21 @@
+S:/Desktop/CPET_233/Lab6/lab6.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none S:/Desktop/CPET_233/Lab6/lab6.vhd
+Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity lab6
+-- Compiling architecture decimal_displayer of lab6
+
+} {} {}} S:/Desktop/CPET_233/Lab6/display_tb.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none S:/Desktop/CPET_233/Lab6/display_tb.vhd
+Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity display_tb
+-- Compiling architecture test of display_tb
+
+} {} {}}

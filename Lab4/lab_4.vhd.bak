@@ -1,0 +1,36 @@
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+
+
+entity birthday_date_displayer is
+	port (
+		w, x, y, z :in std_logic;
+		f : out STD_LOGIC_VECTOR(6 DOWNTO 0)
+		
+	);
+	
+end birthday_date_displayer;
+	
+architecture lab4 of birthday_date_displayer is
+signal inputs : std_logic_vector(3 downto 0);
+begin
+
+    inputs<= w & x & y & z;
+	 
+	 f <= "1000000" WHEN inputs = "0000" ELSE
+			"0011000" WHEN inputs = "0001" ELSE
+			"0111111" WHEN inputs = "0010" ELSE
+			"0100100" WHEN inputs = "0011" ELSE
+			"1111001" WHEN inputs = "0100" ELSE
+			"0111111" WHEN inputs = "0101" ELSE
+			"0100100" WHEN inputs = "0110" ELSE
+			"1000000" WHEN inputs = "0111" ELSE
+			"1000000" WHEN inputs = "1000" ELSE
+			"0011001" WHEN inputs = "1001" ELSE
+			"1111111";
+			
+end lab4;
