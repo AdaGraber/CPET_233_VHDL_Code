@@ -26,7 +26,7 @@ architecture behave of shifter is
 
   --arr for sentence
   type letter is array(natural range <>) of std_logic_vector(6 downto 0);
-  constant start_sentence : letter(22 downto 0) := (letter_I, letter_C, letter_E, blank, letter_C, letter_o, letter_L, letter_d, blank, letter_S, letter_O, letter_d, letter_A, blank, letter_S, letter_O, letter_d, letter_A, blank, letter_H, letter_E, letter_r, letter_E);
+  constant start_sentence : letter(22 downto 0) := letter_I, letter_C, letter_E, blank, letter_C, letter_o, letter_L, letter_d, blank, letter_S, letter_O, letter_d, letter_A, blank, letter_S, letter_O, letter_d, letter_A, blank, letter_H, letter_E, letter_r, letter_E;
   signal sentence         : letter(22 downto 0) := start_sentence;
 begin
 
