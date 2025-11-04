@@ -1,0 +1,45 @@
+S:/CPET_233_VHDL_Code/Lab9/Soda_tb.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none S:/CPET_233_VHDL_Code/Lab9/Soda_tb.vhd
+Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity Soda_tb
+-- Compiling architecture test of soda_tb
+
+} {} {}} S:/CPET_233_VHDL_Code/Lab9/lab9.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none S:/CPET_233_VHDL_Code/Lab9/lab9.vhd
+Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity lab9
+-- Compiling architecture soda of lab9
+
+} {} {}} S:/CPET_233_VHDL_Code/Lab9/shifter.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none S:/CPET_233_VHDL_Code/Lab9/shifter.vhd
+Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity shifter
+-- Compiling architecture behave of shifter
+
+} {} {}} S:/CPET_233_VHDL_Code/Lab9/delay_unit.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none S:/CPET_233_VHDL_Code/Lab9/delay_unit.vhd
+Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity delay_unit
+-- Compiling architecture behave of delay_unit
+
+} {} {}}
