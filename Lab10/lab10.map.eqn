@@ -1,0 +1,1574 @@
+-- Copyright (C) 2018  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+--E1L118 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~1
+E1L118_adder_eqn = ( VCC ) + ( GND ) + ( E1L139 );
+E1L118 = SUM(E1L118_adder_eqn);
+
+
+--E1L122 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~5
+E1L122_adder_eqn = ( money[0] ) + ( VCC ) + ( E1L155 );
+E1L122 = SUM(E1L122_adder_eqn);
+
+--E1L123 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~6
+E1L123_adder_eqn = ( money[0] ) + ( VCC ) + ( E1L155 );
+E1L123 = CARRY(E1L123_adder_eqn);
+
+
+--money[1] is money[1]
+--register power-up is low
+
+money[1] = DFFEAS(A1L2, clk,  ,  , A1L177, A1L179,  ,  , !next_state.Dime_673);
+
+
+--E1L82 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~1
+E1L82_adder_eqn = ( VCC ) + ( GND ) + ( E1L99 );
+E1L82 = SUM(E1L82_adder_eqn);
+
+
+--E1L86 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~5
+E1L86_adder_eqn = ( money[1] ) + ( VCC ) + ( E1L115 );
+E1L86 = SUM(E1L86_adder_eqn);
+
+--E1L87 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~6
+E1L87_adder_eqn = ( money[1] ) + ( VCC ) + ( E1L115 );
+E1L87 = CARRY(E1L87_adder_eqn);
+
+
+--E1L126 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~9
+E1L126_adder_eqn = ( (!E1L82 & ((E1L86))) # (E1L82 & (money[1])) ) + ( GND ) + ( E1L123 );
+E1L126 = SUM(E1L126_adder_eqn);
+
+--E1L127 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~10
+E1L127_adder_eqn = ( (!E1L82 & ((E1L86))) # (E1L82 & (money[1])) ) + ( GND ) + ( E1L123 );
+E1L127 = CARRY(E1L127_adder_eqn);
+
+
+--money[2] is money[2]
+--register power-up is low
+
+money[2] = DFFEAS(A1L6, clk,  ,  , A1L177, A1L180,  ,  , !next_state.Dime_673);
+
+
+--E1L50 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~1
+E1L50_adder_eqn = ( VCC ) + ( GND ) + ( E1L63 );
+E1L50 = SUM(E1L50_adder_eqn);
+
+
+--E1L54 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~5
+E1L54_adder_eqn = ( money[2] ) + ( VCC ) + ( E1L79 );
+E1L54 = SUM(E1L54_adder_eqn);
+
+--E1L55 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~6
+E1L55_adder_eqn = ( money[2] ) + ( VCC ) + ( E1L79 );
+E1L55 = CARRY(E1L55_adder_eqn);
+
+
+--E1L90 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~9
+E1L90_adder_eqn = ( (!E1L50 & ((E1L54))) # (E1L50 & (money[2])) ) + ( GND ) + ( E1L87 );
+E1L90 = SUM(E1L90_adder_eqn);
+
+--E1L91 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~10
+E1L91_adder_eqn = ( (!E1L50 & ((E1L54))) # (E1L50 & (money[2])) ) + ( GND ) + ( E1L87 );
+E1L91 = CARRY(E1L91_adder_eqn);
+
+
+--E1L130 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~13
+E1L130_adder_eqn = ( (!E1L82 & ((E1L90))) # (E1L82 & (E1L172)) ) + ( VCC ) + ( E1L127 );
+E1L130 = SUM(E1L130_adder_eqn);
+
+--E1L131 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~14
+E1L131_adder_eqn = ( (!E1L82 & ((E1L90))) # (E1L82 & (E1L172)) ) + ( VCC ) + ( E1L127 );
+E1L131 = CARRY(E1L131_adder_eqn);
+
+
+--money[3] is money[3]
+--register power-up is low
+
+money[3] = DFFEAS(A1L10, clk,  ,  , A1L177, A1L181,  ,  , !next_state.Dime_673);
+
+
+--E1L22 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~1
+E1L22_adder_eqn = ( VCC ) + ( GND ) + ( E1L31 );
+E1L22 = SUM(E1L22_adder_eqn);
+
+
+--E1L26 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~5
+E1L26_adder_eqn = ( money[3] ) + ( VCC ) + ( E1L47 );
+E1L26 = SUM(E1L26_adder_eqn);
+
+--E1L27 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~6
+E1L27_adder_eqn = ( money[3] ) + ( VCC ) + ( E1L47 );
+E1L27 = CARRY(E1L27_adder_eqn);
+
+
+--E1L58 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~9
+E1L58_adder_eqn = ( (!E1L22 & ((E1L26))) # (E1L22 & (money[3])) ) + ( GND ) + ( E1L55 );
+E1L58 = SUM(E1L58_adder_eqn);
+
+--E1L59 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~10
+E1L59_adder_eqn = ( (!E1L22 & ((E1L26))) # (E1L22 & (money[3])) ) + ( GND ) + ( E1L55 );
+E1L59 = CARRY(E1L59_adder_eqn);
+
+
+--E1L94 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~13
+E1L94_adder_eqn = ( (!E1L50 & ((E1L58))) # (E1L50 & (E1L165)) ) + ( VCC ) + ( E1L91 );
+E1L94 = SUM(E1L94_adder_eqn);
+
+--E1L95 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~14
+E1L95_adder_eqn = ( (!E1L50 & ((E1L58))) # (E1L50 & (E1L165)) ) + ( VCC ) + ( E1L91 );
+E1L95 = CARRY(E1L95_adder_eqn);
+
+
+--E1L134 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~17
+E1L134_adder_eqn = ( (!E1L82 & ((E1L94))) # (E1L82 & (E1L173)) ) + ( GND ) + ( E1L131 );
+E1L134 = SUM(E1L134_adder_eqn);
+
+--E1L135 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~18
+E1L135_adder_eqn = ( (!E1L82 & ((E1L94))) # (E1L82 & (E1L173)) ) + ( GND ) + ( E1L131 );
+E1L135 = CARRY(E1L135_adder_eqn);
+
+
+--E1L138 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~21
+E1L138_adder_eqn = ( (!E1L82 & (((E1L98)))) # (E1L82 & (((E1L180)) # (E1L179))) ) + ( VCC ) + ( E1L143 );
+E1L138 = SUM(E1L138_adder_eqn);
+
+--E1L139 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~22
+E1L139_adder_eqn = ( (!E1L82 & (((E1L98)))) # (E1L82 & (((E1L180)) # (E1L179))) ) + ( VCC ) + ( E1L143 );
+E1L139 = CARRY(E1L139_adder_eqn);
+
+
+--E1L62 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~13
+E1L62_adder_eqn = ( (!E1L22 & (((E1L30)))) # (E1L22 & (((E1L163)) # (E1L164))) ) + ( VCC ) + ( E1L67 );
+E1L62 = SUM(E1L62_adder_eqn);
+
+--E1L63 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~14
+E1L63_adder_eqn = ( (!E1L22 & (((E1L30)))) # (E1L22 & (((E1L163)) # (E1L164))) ) + ( VCC ) + ( E1L67 );
+E1L63 = CARRY(E1L63_adder_eqn);
+
+
+--E1L98 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~17
+E1L98_adder_eqn = ( (!E1L50 & (((E1L62)))) # (E1L50 & (((E1L171)) # (E1L170))) ) + ( VCC ) + ( E1L103 );
+E1L98 = SUM(E1L98_adder_eqn);
+
+--E1L99 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~18
+E1L99_adder_eqn = ( (!E1L50 & (((E1L62)))) # (E1L50 & (((E1L171)) # (E1L170))) ) + ( VCC ) + ( E1L103 );
+E1L99 = CARRY(E1L99_adder_eqn);
+
+
+--E1L30 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~9
+E1L30_adder_eqn = ( (E1L164) # (E1L163) ) + ( VCC ) + ( E1L35 );
+E1L30 = SUM(E1L30_adder_eqn);
+
+--E1L31 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~10
+E1L31_adder_eqn = ( (E1L164) # (E1L163) ) + ( VCC ) + ( E1L35 );
+E1L31 = CARRY(E1L31_adder_eqn);
+
+
+--E1L14 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_3_result_int[3]~1
+E1L14_adder_eqn = ( money[7] ) + ( E1L12 ) + ( E1L11 );
+E1L14 = SUM(E1L14_adder_eqn);
+
+--E1L15 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_3_result_int[3]~2
+E1L15_adder_eqn = ( money[7] ) + ( E1L12 ) + ( E1L11 );
+E1L15 = CARRY(E1L15_adder_eqn);
+
+--E1L16 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_3_result_int[3]~3
+E1L16_share_eqn = GND;
+E1L16 = SHARE(E1L16_share_eqn);
+
+
+--E1L18 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_3_result_int[4]~5
+E1L18_adder_eqn = ( VCC ) + ( E1L16 ) + ( E1L15 );
+E1L18 = SUM(E1L18_adder_eqn);
+
+
+--money[7] is money[7]
+--register power-up is low
+
+money[7] = DFFEAS(A1L14, clk,  ,  , A1L177, A1L182,  ,  , !next_state.Dime_673);
+
+
+--E1L66 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~17
+E1L66_adder_eqn = ( (!E1L22 & (((E1L34)))) # (E1L22 & (((E1L162)) # (E1L161))) ) + ( VCC ) + ( E1L71 );
+E1L66 = SUM(E1L66_adder_eqn);
+
+--E1L67 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~18
+E1L67_adder_eqn = ( (!E1L22 & (((E1L34)))) # (E1L22 & (((E1L162)) # (E1L161))) ) + ( VCC ) + ( E1L71 );
+E1L67 = CARRY(E1L67_adder_eqn);
+
+
+--E1L102 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~21
+E1L102_adder_eqn = ( (!E1L50 & ((E1L66))) # (E1L50 & (E1L169)) ) + ( VCC ) + ( E1L107 );
+E1L102 = SUM(E1L102_adder_eqn);
+
+--E1L103 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~22
+E1L103_adder_eqn = ( (!E1L50 & ((E1L66))) # (E1L50 & (E1L169)) ) + ( VCC ) + ( E1L107 );
+E1L103 = CARRY(E1L103_adder_eqn);
+
+
+--E1L10 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_3_result_int[2]~9
+E1L10_adder_eqn = ( !money[6] ) + ( E1L8 ) + ( E1L7 );
+E1L10 = SUM(E1L10_adder_eqn);
+
+--E1L11 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_3_result_int[2]~10
+E1L11_adder_eqn = ( !money[6] ) + ( E1L8 ) + ( E1L7 );
+E1L11 = CARRY(E1L11_adder_eqn);
+
+--E1L12 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_3_result_int[2]~11
+E1L12_share_eqn = money[6];
+E1L12 = SHARE(E1L12_share_eqn);
+
+
+--E1L34 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~13
+E1L34_adder_eqn = ( (!E1L18 & ((E1L10))) # (E1L18 & (money[6])) ) + ( GND ) + ( E1L39 );
+E1L34 = SUM(E1L34_adder_eqn);
+
+--E1L35 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~14
+E1L35_adder_eqn = ( (!E1L18 & ((E1L10))) # (E1L18 & (money[6])) ) + ( GND ) + ( E1L39 );
+E1L35 = CARRY(E1L35_adder_eqn);
+
+
+--money[6] is money[6]
+--register power-up is low
+
+money[6] = DFFEAS(A1L18, clk,  ,  , A1L177, A1L183,  ,  , !next_state.Dime_673);
+
+
+--E1L38 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~17
+E1L38_adder_eqn = ( (E1L160) # (E1L159) ) + ( VCC ) + ( E1L43 );
+E1L38 = SUM(E1L38_adder_eqn);
+
+--E1L39 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~18
+E1L39_adder_eqn = ( (E1L160) # (E1L159) ) + ( VCC ) + ( E1L43 );
+E1L39 = CARRY(E1L39_adder_eqn);
+
+
+--E1L70 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~21
+E1L70_adder_eqn = ( (!E1L22 & ((E1L38))) # (E1L22 & (E1L158)) ) + ( GND ) + ( E1L75 );
+E1L70 = SUM(E1L70_adder_eqn);
+
+--E1L71 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~22
+E1L71_adder_eqn = ( (!E1L22 & ((E1L38))) # (E1L22 & (E1L158)) ) + ( GND ) + ( E1L75 );
+E1L71 = CARRY(E1L71_adder_eqn);
+
+
+--money[5] is money[5]
+--register power-up is low
+
+money[5] = DFFEAS(A1L22, clk,  ,  , A1L177, A1L184,  ,  , !next_state.Dime_673);
+
+
+--E1L6 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_3_result_int[1]~13
+E1L6_adder_eqn = ( money[5] ) + ( E1L4 ) + ( E1L3 );
+E1L6 = SUM(E1L6_adder_eqn);
+
+--E1L7 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_3_result_int[1]~14
+E1L7_adder_eqn = ( money[5] ) + ( E1L4 ) + ( E1L3 );
+E1L7 = CARRY(E1L7_adder_eqn);
+
+--E1L8 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_3_result_int[1]~15
+E1L8_share_eqn = GND;
+E1L8 = SHARE(E1L8_share_eqn);
+
+
+--E1L106 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~25
+E1L106_adder_eqn = ( (!E1L50 & (((E1L70)))) # (E1L50 & (((E1L168)) # (E1L167))) ) + ( VCC ) + ( E1L111 );
+E1L106 = SUM(E1L106_adder_eqn);
+
+--E1L107 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~26
+E1L107_adder_eqn = ( (!E1L50 & (((E1L70)))) # (E1L50 & (((E1L168)) # (E1L167))) ) + ( VCC ) + ( E1L111 );
+E1L107 = CARRY(E1L107_adder_eqn);
+
+
+--E1L74 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~25
+E1L74_adder_eqn = ( (!E1L22 & ((E1L42))) # (E1L22 & (E1L157)) ) + ( VCC ) + ( E1L59 );
+E1L74 = SUM(E1L74_adder_eqn);
+
+--E1L75 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~26
+E1L75_adder_eqn = ( (!E1L22 & ((E1L42))) # (E1L22 & (E1L157)) ) + ( VCC ) + ( E1L59 );
+E1L75 = CARRY(E1L75_adder_eqn);
+
+
+--E1L110 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~29
+E1L110_adder_eqn = ( (!E1L50 & ((E1L74))) # (E1L50 & (E1L166)) ) + ( GND ) + ( E1L95 );
+E1L110 = SUM(E1L110_adder_eqn);
+
+--E1L111 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~30
+E1L111_adder_eqn = ( (!E1L50 & ((E1L74))) # (E1L50 & (E1L166)) ) + ( GND ) + ( E1L95 );
+E1L111 = CARRY(E1L111_adder_eqn);
+
+
+--money[4] is money[4]
+--register power-up is low
+
+money[4] = DFFEAS(A1L26, clk,  ,  , A1L177, A1L185,  ,  , !next_state.Dime_673);
+
+
+--E1L2 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_3_result_int[0]~17
+E1L2_adder_eqn = ( money[4] ) + ( !VCC ) + ( !VCC );
+E1L2 = SUM(E1L2_adder_eqn);
+
+--E1L3 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_3_result_int[0]~18
+E1L3_adder_eqn = ( money[4] ) + ( !VCC ) + ( !VCC );
+E1L3 = CARRY(E1L3_adder_eqn);
+
+--E1L4 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_3_result_int[0]~19
+E1L4_share_eqn = VCC;
+E1L4 = SHARE(E1L4_share_eqn);
+
+
+--E1L42 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~21
+E1L42_adder_eqn = ( (!E1L18 & ((E1L2))) # (E1L18 & (money[4])) ) + ( GND ) + ( E1L27 );
+E1L42 = SUM(E1L42_adder_eqn);
+
+--E1L43 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~22
+E1L43_adder_eqn = ( (!E1L18 & ((E1L2))) # (E1L18 & (money[4])) ) + ( GND ) + ( E1L27 );
+E1L43 = CARRY(E1L43_adder_eqn);
+
+
+--E1L142 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~25
+E1L142_adder_eqn = ( (!E1L82 & (((E1L102)))) # (E1L82 & (((E1L178)) # (E1L177))) ) + ( VCC ) + ( E1L147 );
+E1L142 = SUM(E1L142_adder_eqn);
+
+--E1L143 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~26
+E1L143_adder_eqn = ( (!E1L82 & (((E1L102)))) # (E1L82 & (((E1L178)) # (E1L177))) ) + ( VCC ) + ( E1L147 );
+E1L143 = CARRY(E1L143_adder_eqn);
+
+
+--E1L146 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~29
+E1L146_adder_eqn = ( (!E1L82 & ((E1L106))) # (E1L82 & (E1L176)) ) + ( VCC ) + ( E1L151 );
+E1L146 = SUM(E1L146_adder_eqn);
+
+--E1L147 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~30
+E1L147_adder_eqn = ( (!E1L82 & ((E1L106))) # (E1L82 & (E1L176)) ) + ( VCC ) + ( E1L151 );
+E1L147 = CARRY(E1L147_adder_eqn);
+
+
+--E1L150 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~33
+E1L150_adder_eqn = ( (!E1L82 & (((E1L110)))) # (E1L82 & (((E1L175)) # (E1L174))) ) + ( VCC ) + ( E1L135 );
+E1L150 = SUM(E1L150_adder_eqn);
+
+--E1L151 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~34
+E1L151_adder_eqn = ( (!E1L82 & (((E1L110)))) # (E1L82 & (((E1L175)) # (E1L174))) ) + ( VCC ) + ( E1L135 );
+E1L151 = CARRY(E1L151_adder_eqn);
+
+
+--E2L18 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_3_result_int[4]~1
+E2L18_adder_eqn = ( VCC ) + ( E2L16 ) + ( E2L15 );
+E2L18 = SUM(E2L18_adder_eqn);
+
+
+--E2L118 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~1
+E2L118_adder_eqn = ( VCC ) + ( GND ) + ( E2L123 );
+E2L118 = SUM(E2L118_adder_eqn);
+
+
+--E2L82 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~1
+E2L82_adder_eqn = ( VCC ) + ( GND ) + ( E2L87 );
+E2L82 = SUM(E2L82_adder_eqn);
+
+
+--E2L50 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~1
+E2L50_adder_eqn = ( VCC ) + ( GND ) + ( E2L55 );
+E2L50 = SUM(E2L50_adder_eqn);
+
+
+--E2L22 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~1
+E2L22_adder_eqn = ( VCC ) + ( GND ) + ( E2L27 );
+E2L22 = SUM(E2L22_adder_eqn);
+
+
+--A1L30 is Add1~1
+A1L30_adder_eqn = ( money[0] ) + ( VCC ) + ( !VCC );
+A1L30 = SUM(A1L30_adder_eqn);
+
+--A1L31 is Add1~2
+A1L31_adder_eqn = ( money[0] ) + ( VCC ) + ( !VCC );
+A1L31 = CARRY(A1L31_adder_eqn);
+
+
+--A1L62 is Add2~1
+A1L62_adder_eqn = ( money[0] ) + ( VCC ) + ( !VCC );
+A1L62 = SUM(A1L62_adder_eqn);
+
+--A1L63 is Add2~2
+A1L63_adder_eqn = ( money[0] ) + ( VCC ) + ( !VCC );
+A1L63 = CARRY(A1L63_adder_eqn);
+
+
+--A1L94 is Add3~1
+A1L94_adder_eqn = ( money[0] ) + ( VCC ) + ( !VCC );
+A1L94 = SUM(A1L94_adder_eqn);
+
+--A1L95 is Add3~2
+A1L95_adder_eqn = ( money[0] ) + ( VCC ) + ( !VCC );
+A1L95 = CARRY(A1L95_adder_eqn);
+
+
+--E1L155 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~38
+E1L155_adder_eqn = ( VCC ) + ( VCC ) + ( !VCC );
+E1L155 = CARRY(E1L155_adder_eqn);
+
+
+--A1L2 is Add0~1
+A1L2_adder_eqn = ( money[1] ) + ( VCC ) + ( !VCC );
+A1L2 = SUM(A1L2_adder_eqn);
+
+--A1L3 is Add0~2
+A1L3_adder_eqn = ( money[1] ) + ( VCC ) + ( !VCC );
+A1L3 = CARRY(A1L3_adder_eqn);
+
+
+--A1L66 is Add2~5
+A1L66_adder_eqn = ( money[1] ) + ( GND ) + ( A1L63 );
+A1L66 = SUM(A1L66_adder_eqn);
+
+--A1L67 is Add2~6
+A1L67_adder_eqn = ( money[1] ) + ( GND ) + ( A1L63 );
+A1L67 = CARRY(A1L67_adder_eqn);
+
+
+--A1L34 is Add1~5
+A1L34_adder_eqn = ( money[1] ) + ( GND ) + ( A1L31 );
+A1L34 = SUM(A1L34_adder_eqn);
+
+--A1L35 is Add1~6
+A1L35_adder_eqn = ( money[1] ) + ( GND ) + ( A1L31 );
+A1L35 = CARRY(A1L35_adder_eqn);
+
+
+--A1L98 is Add3~5
+A1L98_adder_eqn = ( money[1] ) + ( GND ) + ( A1L95 );
+A1L98 = SUM(A1L98_adder_eqn);
+
+--A1L99 is Add3~6
+A1L99_adder_eqn = ( money[1] ) + ( GND ) + ( A1L95 );
+A1L99 = CARRY(A1L99_adder_eqn);
+
+
+--E1L115 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~34
+E1L115_adder_eqn = ( VCC ) + ( VCC ) + ( !VCC );
+E1L115 = CARRY(E1L115_adder_eqn);
+
+
+--A1L6 is Add0~5
+A1L6_adder_eqn = ( money[2] ) + ( GND ) + ( A1L3 );
+A1L6 = SUM(A1L6_adder_eqn);
+
+--A1L7 is Add0~6
+A1L7_adder_eqn = ( money[2] ) + ( GND ) + ( A1L3 );
+A1L7 = CARRY(A1L7_adder_eqn);
+
+
+--A1L70 is Add2~9
+A1L70_adder_eqn = ( money[2] ) + ( GND ) + ( A1L67 );
+A1L70 = SUM(A1L70_adder_eqn);
+
+--A1L71 is Add2~10
+A1L71_adder_eqn = ( money[2] ) + ( GND ) + ( A1L67 );
+A1L71 = CARRY(A1L71_adder_eqn);
+
+
+--A1L38 is Add1~9
+A1L38_adder_eqn = ( money[2] ) + ( VCC ) + ( A1L35 );
+A1L38 = SUM(A1L38_adder_eqn);
+
+--A1L39 is Add1~10
+A1L39_adder_eqn = ( money[2] ) + ( VCC ) + ( A1L35 );
+A1L39 = CARRY(A1L39_adder_eqn);
+
+
+--A1L102 is Add3~9
+A1L102_adder_eqn = ( money[2] ) + ( VCC ) + ( A1L99 );
+A1L102 = SUM(A1L102_adder_eqn);
+
+--A1L103 is Add3~10
+A1L103_adder_eqn = ( money[2] ) + ( VCC ) + ( A1L99 );
+A1L103 = CARRY(A1L103_adder_eqn);
+
+
+--E1L79 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~30
+E1L79_adder_eqn = ( VCC ) + ( VCC ) + ( !VCC );
+E1L79 = CARRY(E1L79_adder_eqn);
+
+
+--A1L10 is Add0~9
+A1L10_adder_eqn = ( money[3] ) + ( VCC ) + ( A1L7 );
+A1L10 = SUM(A1L10_adder_eqn);
+
+--A1L11 is Add0~10
+A1L11_adder_eqn = ( money[3] ) + ( VCC ) + ( A1L7 );
+A1L11 = CARRY(A1L11_adder_eqn);
+
+
+--A1L74 is Add2~13
+A1L74_adder_eqn = ( money[3] ) + ( VCC ) + ( A1L71 );
+A1L74 = SUM(A1L74_adder_eqn);
+
+--A1L75 is Add2~14
+A1L75_adder_eqn = ( money[3] ) + ( VCC ) + ( A1L71 );
+A1L75 = CARRY(A1L75_adder_eqn);
+
+
+--A1L42 is Add1~13
+A1L42_adder_eqn = ( money[3] ) + ( GND ) + ( A1L39 );
+A1L42 = SUM(A1L42_adder_eqn);
+
+--A1L43 is Add1~14
+A1L43_adder_eqn = ( money[3] ) + ( GND ) + ( A1L39 );
+A1L43 = CARRY(A1L43_adder_eqn);
+
+
+--A1L106 is Add3~13
+A1L106_adder_eqn = ( money[3] ) + ( GND ) + ( A1L103 );
+A1L106 = SUM(A1L106_adder_eqn);
+
+--A1L107 is Add3~14
+A1L107_adder_eqn = ( money[3] ) + ( GND ) + ( A1L103 );
+A1L107 = CARRY(A1L107_adder_eqn);
+
+
+--E1L47 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~26
+E1L47_adder_eqn = ( VCC ) + ( VCC ) + ( !VCC );
+E1L47 = CARRY(E1L47_adder_eqn);
+
+
+--A1L14 is Add0~13
+A1L14_adder_eqn = ( money[7] ) + ( GND ) + ( A1L19 );
+A1L14 = SUM(A1L14_adder_eqn);
+
+
+--A1L78 is Add2~17
+A1L78_adder_eqn = ( money[7] ) + ( GND ) + ( A1L83 );
+A1L78 = SUM(A1L78_adder_eqn);
+
+
+--A1L46 is Add1~17
+A1L46_adder_eqn = ( money[7] ) + ( GND ) + ( A1L51 );
+A1L46 = SUM(A1L46_adder_eqn);
+
+
+--A1L110 is Add3~17
+A1L110_adder_eqn = ( money[7] ) + ( VCC ) + ( A1L115 );
+A1L110 = SUM(A1L110_adder_eqn);
+
+
+--A1L18 is Add0~17
+A1L18_adder_eqn = ( money[6] ) + ( GND ) + ( A1L23 );
+A1L18 = SUM(A1L18_adder_eqn);
+
+--A1L19 is Add0~18
+A1L19_adder_eqn = ( money[6] ) + ( GND ) + ( A1L23 );
+A1L19 = CARRY(A1L19_adder_eqn);
+
+
+--A1L82 is Add2~21
+A1L82_adder_eqn = ( money[6] ) + ( GND ) + ( A1L87 );
+A1L82 = SUM(A1L82_adder_eqn);
+
+--A1L83 is Add2~22
+A1L83_adder_eqn = ( money[6] ) + ( GND ) + ( A1L87 );
+A1L83 = CARRY(A1L83_adder_eqn);
+
+
+--A1L50 is Add1~21
+A1L50_adder_eqn = ( money[6] ) + ( GND ) + ( A1L55 );
+A1L50 = SUM(A1L50_adder_eqn);
+
+--A1L51 is Add1~22
+A1L51_adder_eqn = ( money[6] ) + ( GND ) + ( A1L55 );
+A1L51 = CARRY(A1L51_adder_eqn);
+
+
+--A1L114 is Add3~21
+A1L114_adder_eqn = ( money[6] ) + ( GND ) + ( A1L119 );
+A1L114 = SUM(A1L114_adder_eqn);
+
+--A1L115 is Add3~22
+A1L115_adder_eqn = ( money[6] ) + ( GND ) + ( A1L119 );
+A1L115 = CARRY(A1L115_adder_eqn);
+
+
+--A1L22 is Add0~21
+A1L22_adder_eqn = ( money[5] ) + ( GND ) + ( A1L27 );
+A1L22 = SUM(A1L22_adder_eqn);
+
+--A1L23 is Add0~22
+A1L23_adder_eqn = ( money[5] ) + ( GND ) + ( A1L27 );
+A1L23 = CARRY(A1L23_adder_eqn);
+
+
+--A1L86 is Add2~25
+A1L86_adder_eqn = ( money[5] ) + ( GND ) + ( A1L91 );
+A1L86 = SUM(A1L86_adder_eqn);
+
+--A1L87 is Add2~26
+A1L87_adder_eqn = ( money[5] ) + ( GND ) + ( A1L91 );
+A1L87 = CARRY(A1L87_adder_eqn);
+
+
+--A1L54 is Add1~25
+A1L54_adder_eqn = ( money[5] ) + ( GND ) + ( A1L59 );
+A1L54 = SUM(A1L54_adder_eqn);
+
+--A1L55 is Add1~26
+A1L55_adder_eqn = ( money[5] ) + ( GND ) + ( A1L59 );
+A1L55 = CARRY(A1L55_adder_eqn);
+
+
+--A1L118 is Add3~25
+A1L118_adder_eqn = ( money[5] ) + ( VCC ) + ( A1L123 );
+A1L118 = SUM(A1L118_adder_eqn);
+
+--A1L119 is Add3~26
+A1L119_adder_eqn = ( money[5] ) + ( VCC ) + ( A1L123 );
+A1L119 = CARRY(A1L119_adder_eqn);
+
+
+--A1L26 is Add0~25
+A1L26_adder_eqn = ( money[4] ) + ( GND ) + ( A1L11 );
+A1L26 = SUM(A1L26_adder_eqn);
+
+--A1L27 is Add0~26
+A1L27_adder_eqn = ( money[4] ) + ( GND ) + ( A1L11 );
+A1L27 = CARRY(A1L27_adder_eqn);
+
+
+--A1L90 is Add2~29
+A1L90_adder_eqn = ( money[4] ) + ( VCC ) + ( A1L75 );
+A1L90 = SUM(A1L90_adder_eqn);
+
+--A1L91 is Add2~30
+A1L91_adder_eqn = ( money[4] ) + ( VCC ) + ( A1L75 );
+A1L91 = CARRY(A1L91_adder_eqn);
+
+
+--A1L58 is Add1~29
+A1L58_adder_eqn = ( money[4] ) + ( GND ) + ( A1L43 );
+A1L58 = SUM(A1L58_adder_eqn);
+
+--A1L59 is Add1~30
+A1L59_adder_eqn = ( money[4] ) + ( GND ) + ( A1L43 );
+A1L59 = CARRY(A1L59_adder_eqn);
+
+
+--A1L122 is Add3~29
+A1L122_adder_eqn = ( money[4] ) + ( VCC ) + ( A1L107 );
+A1L122 = SUM(A1L122_adder_eqn);
+
+--A1L123 is Add3~30
+A1L123_adder_eqn = ( money[4] ) + ( VCC ) + ( A1L107 );
+A1L123 = CARRY(A1L123_adder_eqn);
+
+
+--E2L14 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_3_result_int[3]~5
+E2L14_adder_eqn = ( money[7] ) + ( E2L12 ) + ( E2L11 );
+E2L14 = SUM(E2L14_adder_eqn);
+
+--E2L15 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_3_result_int[3]~6
+E2L15_adder_eqn = ( money[7] ) + ( E2L12 ) + ( E2L11 );
+E2L15 = CARRY(E2L15_adder_eqn);
+
+--E2L16 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_3_result_int[3]~7
+E2L16_share_eqn = GND;
+E2L16 = SHARE(E2L16_share_eqn);
+
+
+--E2L123 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~6
+E2L123_adder_eqn = ( (!E2L82 & (((E2L86)))) # (E2L82 & (((E2L180)) # (E2L179))) ) + ( VCC ) + ( E2L127 );
+E2L123 = CARRY(E2L123_adder_eqn);
+
+
+--E2L86 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~5
+E2L86_adder_eqn = ( (!E2L50 & (((E2L54)))) # (E2L50 & (((E2L171)) # (E2L170))) ) + ( VCC ) + ( E2L91 );
+E2L86 = SUM(E2L86_adder_eqn);
+
+--E2L87 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~6
+E2L87_adder_eqn = ( (!E2L50 & (((E2L54)))) # (E2L50 & (((E2L171)) # (E2L170))) ) + ( VCC ) + ( E2L91 );
+E2L87 = CARRY(E2L87_adder_eqn);
+
+
+--E2L54 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~5
+E2L54_adder_eqn = ( (!E2L22 & (((E2L26)))) # (E2L22 & (((E2L163)) # (E2L164))) ) + ( VCC ) + ( E2L59 );
+E2L54 = SUM(E2L54_adder_eqn);
+
+--E2L55 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~6
+E2L55_adder_eqn = ( (!E2L22 & (((E2L26)))) # (E2L22 & (((E2L163)) # (E2L164))) ) + ( VCC ) + ( E2L59 );
+E2L55 = CARRY(E2L55_adder_eqn);
+
+
+--E2L26 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~5
+E2L26_adder_eqn = ( (E2L164) # (E2L163) ) + ( VCC ) + ( E2L31 );
+E2L26 = SUM(E2L26_adder_eqn);
+
+--E2L27 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~6
+E2L27_adder_eqn = ( (E2L164) # (E2L163) ) + ( VCC ) + ( E2L31 );
+E2L27 = CARRY(E2L27_adder_eqn);
+
+
+--E2L10 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_3_result_int[2]~9
+E2L10_adder_eqn = ( !money[6] ) + ( E2L8 ) + ( E2L7 );
+E2L10 = SUM(E2L10_adder_eqn);
+
+--E2L11 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_3_result_int[2]~10
+E2L11_adder_eqn = ( !money[6] ) + ( E2L8 ) + ( E2L7 );
+E2L11 = CARRY(E2L11_adder_eqn);
+
+--E2L12 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_3_result_int[2]~11
+E2L12_share_eqn = money[6];
+E2L12 = SHARE(E2L12_share_eqn);
+
+
+--E2L127 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~10
+E2L127_adder_eqn = ( (!E2L82 & (((E2L90)))) # (E2L82 & (((E2L178)) # (E2L177))) ) + ( VCC ) + ( E2L131 );
+E2L127 = CARRY(E2L127_adder_eqn);
+
+
+--E2L90 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~9
+E2L90_adder_eqn = ( (!E2L50 & ((E2L58))) # (E2L50 & (E2L169)) ) + ( VCC ) + ( E2L95 );
+E2L90 = SUM(E2L90_adder_eqn);
+
+--E2L91 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~10
+E2L91_adder_eqn = ( (!E2L50 & ((E2L58))) # (E2L50 & (E2L169)) ) + ( VCC ) + ( E2L95 );
+E2L91 = CARRY(E2L91_adder_eqn);
+
+
+--E2L58 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~9
+E2L58_adder_eqn = ( (!E2L22 & (((E2L30)))) # (E2L22 & (((E2L162)) # (E2L161))) ) + ( VCC ) + ( E2L63 );
+E2L58 = SUM(E2L58_adder_eqn);
+
+--E2L59 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~10
+E2L59_adder_eqn = ( (!E2L22 & (((E2L30)))) # (E2L22 & (((E2L162)) # (E2L161))) ) + ( VCC ) + ( E2L63 );
+E2L59 = CARRY(E2L59_adder_eqn);
+
+
+--E2L30 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~9
+E2L30_adder_eqn = ( (!E2L18 & ((E2L10))) # (E2L18 & (money[6])) ) + ( GND ) + ( E2L35 );
+E2L30 = SUM(E2L30_adder_eqn);
+
+--E2L31 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~10
+E2L31_adder_eqn = ( (!E2L18 & ((E2L10))) # (E2L18 & (money[6])) ) + ( GND ) + ( E2L35 );
+E2L31 = CARRY(E2L31_adder_eqn);
+
+
+--E2L6 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_3_result_int[1]~13
+E2L6_adder_eqn = ( money[5] ) + ( E2L4 ) + ( E2L3 );
+E2L6 = SUM(E2L6_adder_eqn);
+
+--E2L7 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_3_result_int[1]~14
+E2L7_adder_eqn = ( money[5] ) + ( E2L4 ) + ( E2L3 );
+E2L7 = CARRY(E2L7_adder_eqn);
+
+--E2L8 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_3_result_int[1]~15
+E2L8_share_eqn = GND;
+E2L8 = SHARE(E2L8_share_eqn);
+
+
+--E2L131 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~14
+E2L131_adder_eqn = ( (!E2L82 & ((E2L94))) # (E2L82 & (E2L176)) ) + ( VCC ) + ( E2L135 );
+E2L131 = CARRY(E2L131_adder_eqn);
+
+
+--E2L94 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~13
+E2L94_adder_eqn = ( (!E2L50 & (((E2L62)))) # (E2L50 & (((E2L168)) # (E2L167))) ) + ( VCC ) + ( E2L99 );
+E2L94 = SUM(E2L94_adder_eqn);
+
+--E2L95 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~14
+E2L95_adder_eqn = ( (!E2L50 & (((E2L62)))) # (E2L50 & (((E2L168)) # (E2L167))) ) + ( VCC ) + ( E2L99 );
+E2L95 = CARRY(E2L95_adder_eqn);
+
+
+--E2L62 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~13
+E2L62_adder_eqn = ( (!E2L22 & ((E2L34))) # (E2L22 & (E2L158)) ) + ( GND ) + ( E2L67 );
+E2L62 = SUM(E2L62_adder_eqn);
+
+--E2L63 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~14
+E2L63_adder_eqn = ( (!E2L22 & ((E2L34))) # (E2L22 & (E2L158)) ) + ( GND ) + ( E2L67 );
+E2L63 = CARRY(E2L63_adder_eqn);
+
+
+--E2L34 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~13
+E2L34_adder_eqn = ( (E2L160) # (E2L159) ) + ( VCC ) + ( E2L39 );
+E2L34 = SUM(E2L34_adder_eqn);
+
+--E2L35 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~14
+E2L35_adder_eqn = ( (E2L160) # (E2L159) ) + ( VCC ) + ( E2L39 );
+E2L35 = CARRY(E2L35_adder_eqn);
+
+
+--E2L2 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_3_result_int[0]~17
+E2L2_adder_eqn = ( money[4] ) + ( !VCC ) + ( !VCC );
+E2L2 = SUM(E2L2_adder_eqn);
+
+--E2L3 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_3_result_int[0]~18
+E2L3_adder_eqn = ( money[4] ) + ( !VCC ) + ( !VCC );
+E2L3 = CARRY(E2L3_adder_eqn);
+
+--E2L4 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_3_result_int[0]~19
+E2L4_share_eqn = VCC;
+E2L4 = SHARE(E2L4_share_eqn);
+
+
+--E2L135 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~18
+E2L135_adder_eqn = ( (!E2L82 & (((E2L98)))) # (E2L82 & (((E2L175)) # (E2L174))) ) + ( VCC ) + ( E2L139 );
+E2L135 = CARRY(E2L135_adder_eqn);
+
+
+--E2L98 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~17
+E2L98_adder_eqn = ( (!E2L50 & ((E2L66))) # (E2L50 & (E2L166)) ) + ( GND ) + ( E2L103 );
+E2L98 = SUM(E2L98_adder_eqn);
+
+--E2L99 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~18
+E2L99_adder_eqn = ( (!E2L50 & ((E2L66))) # (E2L50 & (E2L166)) ) + ( GND ) + ( E2L103 );
+E2L99 = CARRY(E2L99_adder_eqn);
+
+
+--E2L66 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~17
+E2L66_adder_eqn = ( (!E2L22 & ((E2L38))) # (E2L22 & (E2L157)) ) + ( VCC ) + ( E2L71 );
+E2L66 = SUM(E2L66_adder_eqn);
+
+--E2L67 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~18
+E2L67_adder_eqn = ( (!E2L22 & ((E2L38))) # (E2L22 & (E2L157)) ) + ( VCC ) + ( E2L71 );
+E2L67 = CARRY(E2L67_adder_eqn);
+
+
+--E2L38 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~17
+E2L38_adder_eqn = ( (!E2L18 & ((E2L2))) # (E2L18 & (money[4])) ) + ( GND ) + ( E2L43 );
+E2L38 = SUM(E2L38_adder_eqn);
+
+--E2L39 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~18
+E2L39_adder_eqn = ( (!E2L18 & ((E2L2))) # (E2L18 & (money[4])) ) + ( GND ) + ( E2L43 );
+E2L39 = CARRY(E2L39_adder_eqn);
+
+
+--E2L139 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~22
+E2L139_adder_eqn = ( (!E2L82 & ((E2L102))) # (E2L82 & (E2L173)) ) + ( GND ) + ( E2L143 );
+E2L139 = CARRY(E2L139_adder_eqn);
+
+
+--E2L102 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~21
+E2L102_adder_eqn = ( (!E2L50 & ((E2L70))) # (E2L50 & (E2L165)) ) + ( VCC ) + ( E2L107 );
+E2L102 = SUM(E2L102_adder_eqn);
+
+--E2L103 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~22
+E2L103_adder_eqn = ( (!E2L50 & ((E2L70))) # (E2L50 & (E2L165)) ) + ( VCC ) + ( E2L107 );
+E2L103 = CARRY(E2L103_adder_eqn);
+
+
+--E2L70 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~21
+E2L70_adder_eqn = ( (!E2L22 & ((E2L42))) # (E2L22 & (money[3])) ) + ( GND ) + ( E2L75 );
+E2L70 = SUM(E2L70_adder_eqn);
+
+--E2L71 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~22
+E2L71_adder_eqn = ( (!E2L22 & ((E2L42))) # (E2L22 & (money[3])) ) + ( GND ) + ( E2L75 );
+E2L71 = CARRY(E2L71_adder_eqn);
+
+
+--E2L42 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~21
+E2L42_adder_eqn = ( money[3] ) + ( VCC ) + ( E2L47 );
+E2L42 = SUM(E2L42_adder_eqn);
+
+--E2L43 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~22
+E2L43_adder_eqn = ( money[3] ) + ( VCC ) + ( E2L47 );
+E2L43 = CARRY(E2L43_adder_eqn);
+
+
+--E2L143 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~26
+E2L143_adder_eqn = ( (!E2L82 & ((E2L106))) # (E2L82 & (E2L172)) ) + ( VCC ) + ( E2L147 );
+E2L143 = CARRY(E2L143_adder_eqn);
+
+
+--E2L106 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~25
+E2L106_adder_eqn = ( (!E2L50 & ((E2L74))) # (E2L50 & (money[2])) ) + ( GND ) + ( E2L111 );
+E2L106 = SUM(E2L106_adder_eqn);
+
+--E2L107 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~26
+E2L107_adder_eqn = ( (!E2L50 & ((E2L74))) # (E2L50 & (money[2])) ) + ( GND ) + ( E2L111 );
+E2L107 = CARRY(E2L107_adder_eqn);
+
+
+--E2L74 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~25
+E2L74_adder_eqn = ( money[2] ) + ( VCC ) + ( E2L79 );
+E2L74 = SUM(E2L74_adder_eqn);
+
+--E2L75 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~26
+E2L75_adder_eqn = ( money[2] ) + ( VCC ) + ( E2L79 );
+E2L75 = CARRY(E2L75_adder_eqn);
+
+
+--E2L47 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~26
+E2L47_adder_eqn = ( VCC ) + ( VCC ) + ( !VCC );
+E2L47 = CARRY(E2L47_adder_eqn);
+
+
+--E2L147 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~30
+E2L147_adder_eqn = ( (!E2L82 & ((E2L110))) # (E2L82 & (money[1])) ) + ( GND ) + ( E2L151 );
+E2L147 = CARRY(E2L147_adder_eqn);
+
+
+--E2L110 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~29
+E2L110_adder_eqn = ( money[1] ) + ( VCC ) + ( E2L115 );
+E2L110 = SUM(E2L110_adder_eqn);
+
+--E2L111 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~30
+E2L111_adder_eqn = ( money[1] ) + ( VCC ) + ( E2L115 );
+E2L111 = CARRY(E2L111_adder_eqn);
+
+
+--E2L79 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~30
+E2L79_adder_eqn = ( VCC ) + ( VCC ) + ( !VCC );
+E2L79 = CARRY(E2L79_adder_eqn);
+
+
+--E2L151 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~34
+E2L151_adder_eqn = ( money[0] ) + ( VCC ) + ( E2L155 );
+E2L151 = CARRY(E2L151_adder_eqn);
+
+
+--E2L115 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~34
+E2L115_adder_eqn = ( VCC ) + ( VCC ) + ( !VCC );
+E2L115 = CARRY(E2L115_adder_eqn);
+
+
+--E2L155 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~38
+E2L155_adder_eqn = ( VCC ) + ( VCC ) + ( !VCC );
+E2L155 = CARRY(E2L155_adder_eqn);
+
+
+--Gatorade is Gatorade
+Gatorade = OUTPUT(A1L143Q);
+
+
+--Change_back is Change_back
+Change_back = OUTPUT(A1L127Q);
+
+
+--HEX0[0] is HEX0[0]
+HEX0[0] = OUTPUT(A1L201);
+
+
+--HEX0[1] is HEX0[1]
+HEX0[1] = OUTPUT(A1L200);
+
+
+--HEX0[2] is HEX0[2]
+HEX0[2] = OUTPUT(A1L199);
+
+
+--HEX0[3] is HEX0[3]
+HEX0[3] = OUTPUT(A1L196);
+
+
+--HEX0[4] is HEX0[4]
+HEX0[4] = OUTPUT(A1L195);
+
+
+--HEX0[5] is HEX0[5]
+HEX0[5] = OUTPUT(A1L194);
+
+
+--HEX0[6] is HEX0[6]
+HEX0[6] = OUTPUT(A1L193);
+
+
+--HEX1[0] is HEX1[0]
+HEX1[0] = OUTPUT(A1L192);
+
+
+--HEX1[1] is HEX1[1]
+HEX1[1] = OUTPUT(A1L191);
+
+
+--HEX1[2] is HEX1[2]
+HEX1[2] = OUTPUT(A1L190);
+
+
+--HEX1[3] is HEX1[3]
+HEX1[3] = OUTPUT(A1L189);
+
+
+--HEX1[4] is HEX1[4]
+HEX1[4] = OUTPUT(A1L188);
+
+
+--HEX1[5] is HEX1[5]
+HEX1[5] = OUTPUT(A1L187);
+
+
+--HEX1[6] is HEX1[6]
+HEX1[6] = OUTPUT(A1L186);
+
+
+--A1L143Q is Gatorade~reg0
+--register power-up is low
+
+A1L143Q = DFFEAS(next_state.Vend_518, clk,  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L127Q is Change_back~reg0
+--register power-up is low
+
+A1L127Q = DFFEAS(A1L126, clk,  ,  ,  ,  ,  ,  ,  );
+
+
+--money[0] is money[0]
+--register power-up is low
+
+money[0] = DFFEAS(A1L167, clk,  ,  ,  ,  ,  ,  ,  );
+
+
+--E1L181 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[56]~0
+E1L181 = (!E1L118 & ((E1L122))) # (E1L118 & (money[0]));
+
+
+--E1L182 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[57]~1
+E1L182 = ( E1L126 & ( (!E1L118) # ((!E1L82 & ((E1L86))) # (E1L82 & (money[1]))) ) ) # ( !E1L126 & ( (E1L118 & ((!E1L82 & ((E1L86))) # (E1L82 & (money[1])))) ) );
+
+
+--E1L172 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[40]~2
+E1L172 = (!E1L50 & ((E1L54))) # (E1L50 & (money[2]));
+
+
+--E1L183 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[58]~3
+E1L183 = ( E1L130 & ( (!E1L118) # ((!E1L82 & ((E1L90))) # (E1L82 & (E1L172))) ) ) # ( !E1L130 & ( (E1L118 & ((!E1L82 & ((E1L90))) # (E1L82 & (E1L172)))) ) );
+
+
+--E1L165 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[32]~4
+E1L165 = (!E1L22 & ((E1L26))) # (E1L22 & (money[3]));
+
+
+--E1L173 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[41]~5
+E1L173 = (!E1L50 & ((E1L58))) # (E1L50 & (E1L165));
+
+
+--E1L184 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[59]~6
+E1L184 = ( E1L134 & ( (!E1L118) # ((!E1L82 & ((E1L94))) # (E1L82 & (E1L173))) ) ) # ( !E1L134 & ( (E1L118 & ((!E1L82 & ((E1L94))) # (E1L82 & (E1L173)))) ) );
+
+
+--E1L179 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[45]~7
+E1L179 = (!E1L50 & E1L62);
+
+
+--E1L170 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[36]~8
+E1L170 = (!E1L22 & E1L30);
+
+
+--E1L163 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[27]~9
+E1L163 = (E1L14 & !E1L18);
+
+
+--E1L164 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[27]~10
+E1L164 = (money[7] & E1L18);
+
+
+--E1L171 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[36]~11
+E1L171 = (E1L22 & ((E1L164) # (E1L163)));
+
+
+--E1L180 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[45]~12
+E1L180 = (E1L50 & ((E1L171) # (E1L170)));
+
+
+--E1L188 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[63]~13
+E1L188 = (!E1L82 & (((!E1L98)))) # (E1L82 & (!E1L179 & ((!E1L180))));
+
+
+--E1L177 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[44]~14
+E1L177 = (!E1L50 & E1L66);
+
+
+--E1L161 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[26]~15
+E1L161 = (!E1L18 & E1L10);
+
+
+--E1L162 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[26]~16
+E1L162 = (money[6] & E1L18);
+
+
+--E1L169 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[35]~17
+E1L169 = (!E1L22 & (((E1L34)))) # (E1L22 & (((E1L162)) # (E1L161)));
+
+
+--E1L178 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[44]~18
+E1L178 = (E1L50 & E1L169);
+
+
+--E1L187 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[62]~19
+E1L187 = (!E1L82 & (((!E1L102)))) # (E1L82 & (!E1L177 & ((!E1L178))));
+
+
+--E1L167 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[34]~20
+E1L167 = (!E1L22 & E1L38);
+
+
+--E1L158 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[25]~21
+E1L158 = (!E1L18 & ((E1L6))) # (E1L18 & (money[5]));
+
+
+--E1L168 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[34]~22
+E1L168 = (E1L22 & E1L158);
+
+
+--E1L176 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[43]~23
+E1L176 = (!E1L50 & (((E1L70)))) # (E1L50 & (((E1L168)) # (E1L167)));
+
+
+--E1L186 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[61]~24
+E1L186 = (!E1L82 & ((E1L106))) # (E1L82 & (E1L176));
+
+
+--E1L174 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[42]~25
+E1L174 = (!E1L50 & E1L74);
+
+
+--E1L157 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[24]~26
+E1L157 = (!E1L18 & ((E1L2))) # (E1L18 & (money[4]));
+
+
+--E1L166 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[33]~27
+E1L166 = (!E1L22 & ((E1L42))) # (E1L22 & (E1L157));
+
+
+--E1L175 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[42]~28
+E1L175 = (E1L50 & E1L166);
+
+
+--E1L185 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[60]~29
+E1L185 = (!E1L82 & (((!E1L110)))) # (E1L82 & (!E1L174 & ((!E1L175))));
+
+
+--A1L197 is Mux11~0
+A1L197 = ( E1L186 & ( E1L185 & ( (!E1L118 & !E1L138) ) ) ) # ( !E1L186 & ( E1L185 & ( (!E1L118 & (!E1L138)) # (E1L118 & (((E1L188 & E1L187)))) ) ) ) # ( E1L186 & ( !E1L185 & ( (!E1L118 & !E1L138) ) ) ) # ( !E1L186 & ( !E1L185 & ( (!E1L118 & !E1L138) ) ) );
+
+
+--A1L198 is Mux11~1
+A1L198 = (!E1L118 & (((E1L150) # (E1L146)) # (E1L142)));
+
+
+--A1L199 is Mux11~2
+A1L199 = ( A1L197 & ( !A1L198 & ( (!E1L181 & (E1L182 & (!E1L183 & !E1L184))) ) ) );
+
+
+--A1L190 is Mux4~0
+A1L190 = ( E2L118 & ( (E2L18 & (E2L22 & (E2L50 & !E2L82))) ) );
+
+
+--clk is clk
+clk = INPUT();
+
+
+--A1L126 is Change_back~0
+A1L126 = (next_state.Change_487) # (next_state.Excess_549);
+
+
+--reset_n is reset_n
+reset_n = INPUT();
+
+
+--A1L175 is money[7]~0
+A1L175 = (!next_state.Quarter_611 & !next_state.Nickel_642);
+
+
+--A1L176 is money[7]~1
+A1L176 = (!next_state.Vend_518 & !next_state.Change_487);
+
+
+--A1L166 is money[0]~2
+A1L166 = ( A1L62 & ( A1L94 & ( (!next_state.Nickel_642 & (((next_state.Quarter_611)) # (next_state.Vend_518))) # (next_state.Nickel_642 & (((A1L30)))) ) ) ) # ( !A1L62 & ( A1L94 & ( (!next_state.Nickel_642 & (next_state.Vend_518 & (!next_state.Quarter_611))) # (next_state.Nickel_642 & (((A1L30)))) ) ) ) # ( A1L62 & ( !A1L94 & ( (!next_state.Nickel_642 & (next_state.Quarter_611)) # (next_state.Nickel_642 & ((A1L30))) ) ) ) # ( !A1L62 & ( !A1L94 & ( (next_state.Nickel_642 & A1L30) ) ) );
+
+
+--A1L167 is money[0]~3
+A1L167 = ( A1L176 & ( A1L166 & ( (!next_state.Dime_673) # (money[0]) ) ) ) # ( !A1L176 & ( A1L166 & ( (!next_state.Dime_673) # (money[0]) ) ) ) # ( A1L176 & ( !A1L166 & ( (money[0] & (((reset_n & A1L175)) # (next_state.Dime_673))) ) ) ) # ( !A1L176 & ( !A1L166 & ( (money[0] & next_state.Dime_673) ) ) );
+
+
+--A1L178 is money~4
+A1L178 = (!next_state.Nickel_642 & (((!next_state.Vend_518 & !next_state.Dime_673)) # (next_state.Quarter_611)));
+
+
+--A1L179 is money~5
+A1L179 = ( A1L98 & ( A1L178 & ( (next_state.Quarter_611 & (!next_state.Nickel_642 & A1L66)) ) ) ) # ( !A1L98 & ( A1L178 & ( (next_state.Quarter_611 & (!next_state.Nickel_642 & A1L66)) ) ) ) # ( A1L98 & ( !A1L178 & ( ((!next_state.Nickel_642 & ((!next_state.Quarter_611) # (A1L66)))) # (A1L34) ) ) ) # ( !A1L98 & ( !A1L178 & ( (!next_state.Nickel_642 & (next_state.Quarter_611 & ((A1L34) # (A1L66)))) # (next_state.Nickel_642 & (((A1L34)))) ) ) );
+
+
+--A1L177 is money[7]~6
+A1L177 = ( next_state.Quarter_611 & ( next_state.Nickel_642 ) ) # ( !next_state.Quarter_611 & ( next_state.Nickel_642 ) ) # ( next_state.Quarter_611 & ( !next_state.Nickel_642 ) ) # ( !next_state.Quarter_611 & ( !next_state.Nickel_642 & ( (((!reset_n) # (next_state.Dime_673)) # (next_state.Change_487)) # (next_state.Vend_518) ) ) );
+
+
+--A1L180 is money~7
+A1L180 = ( A1L38 & ( A1L102 & ( (!A1L178) # ((next_state.Quarter_611 & (!next_state.Nickel_642 & A1L70))) ) ) ) # ( !A1L38 & ( A1L102 & ( (!next_state.Nickel_642 & ((!next_state.Quarter_611 & (!A1L178)) # (next_state.Quarter_611 & ((A1L70))))) ) ) ) # ( A1L38 & ( !A1L102 & ( (!next_state.Nickel_642 & (next_state.Quarter_611 & ((!A1L178) # (A1L70)))) # (next_state.Nickel_642 & (((!A1L178)))) ) ) ) # ( !A1L38 & ( !A1L102 & ( (next_state.Quarter_611 & (!next_state.Nickel_642 & A1L70)) ) ) );
+
+
+--A1L181 is money~8
+A1L181 = ( A1L42 & ( A1L106 & ( (!A1L178) # ((next_state.Quarter_611 & (!next_state.Nickel_642 & A1L74))) ) ) ) # ( !A1L42 & ( A1L106 & ( (!next_state.Nickel_642 & ((!next_state.Quarter_611 & (!A1L178)) # (next_state.Quarter_611 & ((A1L74))))) ) ) ) # ( A1L42 & ( !A1L106 & ( (!next_state.Nickel_642 & (next_state.Quarter_611 & ((!A1L178) # (A1L74)))) # (next_state.Nickel_642 & (((!A1L178)))) ) ) ) # ( !A1L42 & ( !A1L106 & ( (next_state.Quarter_611 & (!next_state.Nickel_642 & A1L74)) ) ) );
+
+
+--A1L182 is money~9
+A1L182 = ( A1L46 & ( A1L110 & ( (!A1L178) # ((next_state.Quarter_611 & (!next_state.Nickel_642 & A1L78))) ) ) ) # ( !A1L46 & ( A1L110 & ( (!next_state.Nickel_642 & ((!next_state.Quarter_611 & (!A1L178)) # (next_state.Quarter_611 & ((A1L78))))) ) ) ) # ( A1L46 & ( !A1L110 & ( (!next_state.Nickel_642 & (next_state.Quarter_611 & ((!A1L178) # (A1L78)))) # (next_state.Nickel_642 & (((!A1L178)))) ) ) ) # ( !A1L46 & ( !A1L110 & ( (next_state.Quarter_611 & (!next_state.Nickel_642 & A1L78)) ) ) );
+
+
+--A1L183 is money~10
+A1L183 = ( A1L50 & ( A1L114 & ( (!A1L178) # ((next_state.Quarter_611 & (!next_state.Nickel_642 & A1L82))) ) ) ) # ( !A1L50 & ( A1L114 & ( (!next_state.Nickel_642 & ((!next_state.Quarter_611 & (!A1L178)) # (next_state.Quarter_611 & ((A1L82))))) ) ) ) # ( A1L50 & ( !A1L114 & ( (!next_state.Nickel_642 & (next_state.Quarter_611 & ((!A1L178) # (A1L82)))) # (next_state.Nickel_642 & (((!A1L178)))) ) ) ) # ( !A1L50 & ( !A1L114 & ( (next_state.Quarter_611 & (!next_state.Nickel_642 & A1L82)) ) ) );
+
+
+--E1L159 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[25]~30
+E1L159 = (!E1L18 & E1L6);
+
+
+--E1L160 is lpm_divide:Mod0|lpm_divide_c2m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[25]~31
+E1L160 = (money[5] & E1L18);
+
+
+--A1L184 is money~11
+A1L184 = ( A1L54 & ( A1L118 & ( (!A1L178) # ((next_state.Quarter_611 & (!next_state.Nickel_642 & A1L86))) ) ) ) # ( !A1L54 & ( A1L118 & ( (!next_state.Nickel_642 & ((!next_state.Quarter_611 & (!A1L178)) # (next_state.Quarter_611 & ((A1L86))))) ) ) ) # ( A1L54 & ( !A1L118 & ( (!next_state.Nickel_642 & (next_state.Quarter_611 & ((!A1L178) # (A1L86)))) # (next_state.Nickel_642 & (((!A1L178)))) ) ) ) # ( !A1L54 & ( !A1L118 & ( (next_state.Quarter_611 & (!next_state.Nickel_642 & A1L86)) ) ) );
+
+
+--A1L185 is money~12
+A1L185 = ( A1L58 & ( A1L122 & ( (!A1L178) # ((next_state.Quarter_611 & (!next_state.Nickel_642 & A1L90))) ) ) ) # ( !A1L58 & ( A1L122 & ( (!next_state.Nickel_642 & ((!next_state.Quarter_611 & (!A1L178)) # (next_state.Quarter_611 & ((A1L90))))) ) ) ) # ( A1L58 & ( !A1L122 & ( (!next_state.Nickel_642 & (next_state.Quarter_611 & ((!A1L178) # (A1L90)))) # (next_state.Nickel_642 & (((!A1L178)))) ) ) ) # ( !A1L58 & ( !A1L122 & ( (next_state.Quarter_611 & (!next_state.Nickel_642 & A1L90)) ) ) );
+
+
+--Dime_in is Dime_in
+Dime_in = INPUT();
+
+
+--Nickel_in is Nickel_in
+Nickel_in = INPUT();
+
+
+--Quarter_in is Quarter_in
+Quarter_in = INPUT();
+
+
+--Dispense is Dispense
+Dispense = INPUT();
+
+
+--current_state.Enough is current_state.Enough
+--register power-up is low
+
+current_state.Enough = DFFEAS(next_state.Enough_580, clk, reset_n,  ,  ,  ,  ,  ,  );
+
+
+--current_state.Excess is current_state.Excess
+--register power-up is low
+
+current_state.Excess = DFFEAS(next_state.Excess_549, clk, reset_n,  ,  ,  ,  ,  ,  );
+
+
+--A1L224 is Selector6~0
+A1L224 = ( current_state.Enough & ( current_state.Excess & ( (!Dime_in & (!Nickel_in & (!Quarter_in & Dispense))) ) ) ) # ( !current_state.Enough & ( current_state.Excess & ( (!Dime_in & (!Nickel_in & (!Quarter_in & Dispense))) ) ) ) # ( current_state.Enough & ( !current_state.Excess & ( (!Dime_in & (!Nickel_in & (!Quarter_in & Dispense))) ) ) );
+
+
+--A1L130 is comb~0
+A1L130 = (!Nickel_in & !Quarter_in);
+
+
+--Coin_return is Coin_return
+Coin_return = INPUT();
+
+
+--A1L160 is LessThan0~0
+A1L160 = (!money[5] & !money[4]);
+
+
+--A1L161 is LessThan0~1
+A1L161 = ( money[1] & ( A1L160 & ( (money[6] & (money[3] & ((money[2]) # (money[0])))) ) ) ) # ( !money[1] & ( A1L160 & ( (money[6] & (money[3] & money[2])) ) ) ) # ( money[1] & ( !A1L160 & ( money[6] ) ) ) # ( !money[1] & ( !A1L160 & ( money[6] ) ) );
+
+
+--current_state.WAIT1 is current_state.WAIT1
+--register power-up is low
+
+current_state.WAIT1 = DFFEAS(A1L139, clk, reset_n,  ,  ,  ,  ,  ,  );
+
+
+--A1L217 is Selector3~0
+A1L217 = (!Dime_in & !current_state.WAIT1);
+
+
+--A1L228 is Selector8~0
+A1L228 = ( current_state.Enough & ( (!Dime_in & (!Nickel_in & (!Quarter_in & !Dispense))) ) );
+
+
+--A1L229 is Selector8~1
+A1L229 = ( A1L217 & ( A1L228 & ( Coin_return ) ) ) # ( !A1L217 & ( A1L228 & ( Coin_return ) ) ) # ( A1L217 & ( !A1L228 & ( ((!A1L130) # ((A1L161) # (Coin_return))) # (money[7]) ) ) ) # ( !A1L217 & ( !A1L228 ) );
+
+
+--A1L223 is Selector5~0
+A1L223 = ( current_state.Excess & ( ((Quarter_in) # (Nickel_in)) # (Dime_in) ) ) # ( !current_state.Excess & ( (current_state.Enough & (((Quarter_in) # (Nickel_in)) # (Dime_in))) ) );
+
+
+--A1L219 is Selector4~0
+A1L219 = (!Dime_in & (!Nickel_in & (!Quarter_in & !Dispense)));
+
+
+--current_state.Vend is current_state.Vend
+--register power-up is low
+
+current_state.Vend = DFFEAS(next_state.Vend_518, clk, reset_n,  ,  ,  ,  ,  ,  );
+
+
+--A1L163 is LessThan2~0
+A1L163 = ( !money[2] & ( !money[1] & ( (!money[0] & (!money[7] & (!money[6] & !money[3]))) ) ) );
+
+
+--A1L225 is Selector7~0
+A1L225 = (Coin_return & !current_state.WAIT1);
+
+
+--A1L226 is Selector7~1
+A1L226 = (!current_state.Enough & ((!current_state.Excess) # (!Coin_return)));
+
+
+--A1L227 is Selector7~2
+A1L227 = ( A1L225 & ( A1L226 ) ) # ( !A1L225 & ( A1L226 & ( (current_state.Vend & ((!A1L160) # (!A1L163))) ) ) ) # ( A1L225 & ( !A1L226 ) ) # ( !A1L225 & ( !A1L226 & ( ((current_state.Vend & ((!A1L160) # (!A1L163)))) # (A1L219) ) ) );
+
+
+--A1L162 is LessThan0~2
+A1L162 = ( money[2] & ( money[1] & ( (!money[5] & (!money[4] & !money[3])) ) ) ) # ( !money[2] & ( money[1] & ( (!money[5] & (!money[4] & ((!money[0]) # (!money[3])))) ) ) ) # ( money[2] & ( !money[1] & ( (!money[5] & (!money[4] & !money[3])) ) ) ) # ( !money[2] & ( !money[1] & ( (!money[5] & !money[4]) ) ) );
+
+
+--A1L215 is Selector1~0
+A1L215 = ( A1L162 & ( !current_state.WAIT1 & ( (!money[7] & (Dime_in & !Coin_return)) ) ) ) # ( !A1L162 & ( !current_state.WAIT1 & ( (!money[7] & (!money[6] & (Dime_in & !Coin_return))) ) ) );
+
+
+--A1L218 is Selector3~1
+A1L218 = ( !A1L161 & ( !current_state.WAIT1 & ( (!money[7] & (!Dime_in & (Quarter_in & !Coin_return))) ) ) );
+
+
+--A1L216 is Selector2~0
+A1L216 = ( A1L161 & ( current_state.WAIT1 ) ) # ( !A1L161 & ( current_state.WAIT1 ) ) # ( A1L161 & ( !current_state.WAIT1 ) ) # ( !A1L161 & ( !current_state.WAIT1 & ( (((Coin_return) # (Quarter_in)) # (Dime_in)) # (money[7]) ) ) );
+
+
+--E2L179 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[45]~0
+E2L179 = (!E2L50 & E2L54);
+
+
+--E2L170 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[36]~1
+E2L170 = (!E2L22 & E2L26);
+
+
+--E2L163 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[27]~2
+E2L163 = (E2L14 & !E2L18);
+
+
+--E2L164 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[27]~3
+E2L164 = (money[7] & E2L18);
+
+
+--E2L171 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[36]~4
+E2L171 = (E2L22 & ((E2L164) # (E2L163)));
+
+
+--E2L180 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[45]~5
+E2L180 = (E2L50 & ((E2L171) # (E2L170)));
+
+
+--E2L177 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[44]~6
+E2L177 = (!E2L50 & E2L58);
+
+
+--E2L161 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[26]~7
+E2L161 = (!E2L18 & E2L10);
+
+
+--E2L162 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[26]~8
+E2L162 = (money[6] & E2L18);
+
+
+--E2L169 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[35]~9
+E2L169 = (!E2L22 & (((E2L30)))) # (E2L22 & (((E2L162)) # (E2L161)));
+
+
+--E2L178 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[44]~10
+E2L178 = (E2L50 & E2L169);
+
+
+--current_state.Dime is current_state.Dime
+--register power-up is low
+
+current_state.Dime = DFFEAS(next_state.Dime_673, clk, reset_n,  ,  ,  ,  ,  ,  );
+
+
+--current_state.Nickel is current_state.Nickel
+--register power-up is low
+
+current_state.Nickel = DFFEAS(next_state.Nickel_642, clk, reset_n,  ,  ,  ,  ,  ,  );
+
+
+--current_state.Quarter is current_state.Quarter
+--register power-up is low
+
+current_state.Quarter = DFFEAS(next_state.Quarter_611, clk, reset_n,  ,  ,  ,  ,  ,  );
+
+
+--A1L220 is Selector4~1
+A1L220 = ( !current_state.Quarter & ( (!current_state.Dime & (!current_state.Nickel & ((current_state.WAIT1) # (Coin_return)))) ) );
+
+
+--A1L221 is Selector4~2
+A1L221 = (current_state.Excess & !Coin_return);
+
+
+--A1L222 is Selector4~3
+A1L222 = ( A1L220 & ( A1L221 & ( A1L219 ) ) ) # ( !A1L220 & ( A1L221 & ( (((money[6] & !A1L162)) # (A1L219)) # (money[7]) ) ) ) # ( !A1L220 & ( !A1L221 & ( ((money[6] & !A1L162)) # (money[7]) ) ) );
+
+
+--current_state.Change is current_state.Change
+--register power-up is low
+
+current_state.Change = DFFEAS(next_state.Change_487, clk, reset_n,  ,  ,  ,  ,  ,  );
+
+
+--A1L213 is Selector0~0
+A1L213 = (!current_state.Change & ((!A1L160) # ((!current_state.Vend) # (!A1L163))));
+
+
+--A1L214 is Selector0~1
+A1L214 = ( current_state.Quarter & ( A1L213 & ( (!money[7] & !A1L161) ) ) ) # ( !current_state.Quarter & ( A1L213 & ( (!money[7] & (!A1L161 & ((current_state.Nickel) # (current_state.Dime)))) ) ) ) # ( current_state.Quarter & ( !A1L213 ) ) # ( !current_state.Quarter & ( !A1L213 ) );
+
+
+--E2L167 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[34]~11
+E2L167 = (!E2L22 & E2L34);
+
+
+--E2L158 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[25]~12
+E2L158 = (!E2L18 & ((E2L6))) # (E2L18 & (money[5]));
+
+
+--E2L168 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[34]~13
+E2L168 = (E2L22 & E2L158);
+
+
+--E2L176 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[43]~14
+E2L176 = (!E2L50 & (((E2L62)))) # (E2L50 & (((E2L168)) # (E2L167)));
+
+
+--E2L159 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[25]~15
+E2L159 = (!E2L18 & E2L6);
+
+
+--E2L160 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[25]~16
+E2L160 = (money[5] & E2L18);
+
+
+--E2L174 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[42]~17
+E2L174 = (!E2L50 & E2L66);
+
+
+--E2L157 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[24]~18
+E2L157 = (!E2L18 & ((E2L2))) # (E2L18 & (money[4]));
+
+
+--E2L166 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[33]~19
+E2L166 = (!E2L22 & ((E2L38))) # (E2L22 & (E2L157));
+
+
+--E2L175 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[42]~20
+E2L175 = (E2L50 & E2L166);
+
+
+--E2L165 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[32]~21
+E2L165 = (!E2L22 & ((E2L42))) # (E2L22 & (money[3]));
+
+
+--E2L173 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[41]~22
+E2L173 = (!E2L50 & ((E2L70))) # (E2L50 & (E2L165));
+
+
+--E2L172 is lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[40]~23
+E2L172 = (!E2L50 & ((E2L74))) # (E2L50 & (money[2]));
+
+
+--A1L186 is Mux0~0
+A1L186 = ( E2L18 & ( (E2L22 & ((!E2L50 & (!E2L82 & !E2L118)) # (E2L50 & (E2L82)))) ) );
+
+
+--A1L187 is Mux1~0
+A1L187 = ( E2L18 & ( (E2L22 & ((!E2L50 & (!E2L82 & !E2L118)) # (E2L50 & ((!E2L82) # (!E2L118))))) ) );
+
+
+--A1L188 is Mux2~0
+A1L188 = ( E2L18 & ( (!E2L82 & (E2L22 & ((!E2L118)))) # (E2L82 & ((!E2L50 & (E2L22)) # (E2L50 & ((!E2L118))))) ) );
+
+
+--A1L189 is Mux3~0
+A1L189 = ( E2L18 & ( (!E2L50 & (E2L22 & (!E2L82 $ (E2L118)))) # (E2L50 & (((E2L82 & !E2L118)))) ) );
+
+
+--A1L191 is Mux5~0
+A1L191 = ( E2L18 & ( (E2L22 & (!E2L50 & (!E2L82 $ (!E2L118)))) ) );
+
+
+--A1L192 is Mux6~0
+A1L192 = ( E2L18 & ( (E2L22 & (E2L82 & (!E2L50 $ (!E2L118)))) ) );
+
+
+--A1L193 is Mux7~0
+A1L193 = ( !A1L198 & ( A1L197 & ( (!E1L184 & ((!E1L183 & (!E1L182)) # (E1L183 & (E1L182 & E1L181)))) ) ) );
+
+
+--A1L194 is Mux8~0
+A1L194 = ( !A1L198 & ( A1L197 & ( (!E1L184 & ((!E1L183 & ((E1L181) # (E1L182))) # (E1L183 & (E1L182 & E1L181)))) ) ) );
+
+
+--A1L195 is Mux9~0
+A1L195 = ( !A1L198 & ( A1L197 & ( (!E1L182 & ((!E1L183 & ((E1L181))) # (E1L183 & (!E1L184)))) # (E1L182 & (!E1L184 & ((E1L181)))) ) ) );
+
+
+--A1L196 is Mux10~0
+A1L196 = ( !A1L198 & ( A1L197 & ( (!E1L183 & (((!E1L182 & E1L181)))) # (E1L183 & (!E1L184 & (!E1L182 $ (E1L181)))) ) ) );
+
+
+--A1L200 is Mux12~0
+A1L200 = ( !A1L198 & ( A1L197 & ( (!E1L184 & (E1L183 & (!E1L182 $ (!E1L181)))) ) ) );
+
+
+--A1L201 is Mux13~0
+A1L201 = ( !E1L182 & ( E1L181 & ( (!A1L198 & (A1L197 & (!E1L184 & !E1L183))) ) ) ) # ( !E1L182 & ( !E1L181 & ( (!A1L198 & (A1L197 & (!E1L184 & E1L183))) ) ) );
+
+
+--A1L139 is current_state.WAIT1~0
+A1L139 = !next_state.WAIT1_704;
+
+
+--next_state.Vend_518 is next_state.Vend_518
+next_state.Vend_518 = ( next_state.Vend_518 & ( A1L229 & ( A1L224 ) ) ) # ( !next_state.Vend_518 & ( A1L229 & ( A1L224 ) ) ) # ( next_state.Vend_518 & ( !A1L229 ) );
+
+
+--next_state.Excess_549 is next_state.Excess_549
+next_state.Excess_549 = ( next_state.Excess_549 & ( A1L229 & ( A1L223 ) ) ) # ( !next_state.Excess_549 & ( A1L229 & ( A1L223 ) ) ) # ( next_state.Excess_549 & ( !A1L229 ) );
+
+
+--next_state.Change_487 is next_state.Change_487
+next_state.Change_487 = ( next_state.Change_487 & ( A1L229 & ( A1L227 ) ) ) # ( !next_state.Change_487 & ( A1L229 & ( A1L227 ) ) ) # ( next_state.Change_487 & ( !A1L229 ) );
+
+
+--next_state.Dime_673 is next_state.Dime_673
+next_state.Dime_673 = ( next_state.Dime_673 & ( A1L229 & ( A1L215 ) ) ) # ( !next_state.Dime_673 & ( A1L229 & ( A1L215 ) ) ) # ( next_state.Dime_673 & ( !A1L229 ) );
+
+
+--next_state.Quarter_611 is next_state.Quarter_611
+next_state.Quarter_611 = ( next_state.Quarter_611 & ( A1L229 & ( A1L218 ) ) ) # ( !next_state.Quarter_611 & ( A1L229 & ( A1L218 ) ) ) # ( next_state.Quarter_611 & ( !A1L229 ) );
+
+
+--next_state.Nickel_642 is next_state.Nickel_642
+next_state.Nickel_642 = ( next_state.Nickel_642 & ( A1L229 & ( !A1L216 ) ) ) # ( !next_state.Nickel_642 & ( A1L229 & ( !A1L216 ) ) ) # ( next_state.Nickel_642 & ( !A1L229 ) );
+
+
+--next_state.Enough_580 is next_state.Enough_580
+next_state.Enough_580 = ( next_state.Enough_580 & ( A1L229 & ( A1L222 ) ) ) # ( !next_state.Enough_580 & ( A1L229 & ( A1L222 ) ) ) # ( next_state.Enough_580 & ( !A1L229 ) );
+
+
+--next_state.WAIT1_704 is next_state.WAIT1_704
+next_state.WAIT1_704 = ( next_state.WAIT1_704 & ( A1L229 & ( A1L214 ) ) ) # ( !next_state.WAIT1_704 & ( A1L229 & ( A1L214 ) ) ) # ( next_state.WAIT1_704 & ( !A1L229 ) );
+
+

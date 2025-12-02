@@ -14,14 +14,14 @@ end vending_machine;
 architecture behave of vending_machine is
   type state_type is (WAIT1, Dime, Nickel, Quarter, Enough, Excess, Vend, Change);
   signal current_state, next_state : state_type;
-  signal money                     : unsigned(7 downto 0) := (others => '0');
-  constant cent_75                 : unsigned(7 downto 0)  := "01001011";
-  constant cent_25                 : unsigned (7 downto 0) := "00011001";
-  constant cent_10                 : unsigned (7 downto 0) := "00001010";
-  constant cent_05                 : unsigned (7 downto 0) := "00000101";
+  signal money                     : unsigned(6 downto 0);
+  constant cent_75                 : unsigned(6 downto 0)  := "01001011";
+  constant cent_25                 : unsigned (6 downto 0) := "0011001";
+  constant cent_10                 : unsigned (6 downto 0) := "0001010";
+  constant cent_05                 : unsigned (6 downto 0) := "0000101";
 
-  signal tens_output : unsigned(7 downto 0) := (others => '0');
-  signal ones_output : unsigned(7 downto 0) := (others => '0');
+  signal tens_output : unsigned(6 downto 0) := (others => '0');
+  signal ones_output : unsigned(6 downto 0) := (others => '0');
 begin
 
   -- state sync
@@ -39,7 +39,7 @@ begin
   begin
     case(current_state) is
       when WAIT1 => --state transitions from waiting state
-      if (coin_return = '1') then
+      if (coin_return = '0') then
         next_state <= change;
       elsif (money >= cent_75) then
         next_state <= enough;
@@ -87,7 +87,7 @@ begin
         next_state <= Enough;
       end if;
       when VEND =>
-      if (money > "00000000") then
+      if (money > "0000000") then
         next_state <= Change;
       else
         next_state <= Wait1;
@@ -97,51 +97,97 @@ begin
     end case;
   end process;
 
-  --output logic for money being changed
- money_calc:PROCESS(clk)
-BEGIN
-	if(rising_edge(clk)) THEN
-		if(next_state = DIME) THEN
-		    money <= money + cent_10;
-		elsif (next_state = nickel) then
-		    money <= money + cent_05;
-		elsif(next_state = quarter) THEN
-		    money <= money + cent_25;
-		elsif(next_state = vend) then
-		    money <= money - cent_75;
-		elsif(next_state = change) then
-		    money <= (others => '0');
-		elsif(reset_n = '0') then
-		    money <= (others => '0');
-		end if;
-	end if;
-end process;
+  --output logic for wait 
+  waiting : process (clk)
+  begin
+    if (rising_edge(clk)) then
+      if (next_state = wait1) then
+        gatorade    <= '0'; -- do not dispense gatorade
+        change_back <= '0'; -- do not dispense change
+      end if;
+    end if;
+  end process;
+  --output logic for when dime is inserted
+  out_dime : process (clk)
+  begin
+    if (rising_edge(clk)) then
+      if (next_state = dime) then
+        money       <= money + cent_10; --add 10 cents to the money counter
+        gatorade    <= '0'; -- do not dispense gatorade
+        change_back <= '0'; -- do not dispense change
+      end if;
+    end if;
+  end process;
 
--- output logic for gatorade being dispensed
-gatorade_calc : PROCESS(clk)
-BEGIN
-	if(rising_edge(clk)) THEN
-	    if(next_state = vend) THEN
-		     gatorade <= '1';
-		 ELSE
-		     gatorade <= '0';
-		 end if;
-	end if;
-end process;
+  --output logic for when dime is inserted
+  out_nickel : process (clk)
+  begin
+    if (rising_edge(clk)) then
+      if (next_state = nickel) then
+        money       <= money + cent_05; --add 5 cents to the money counter
+        gatorade    <= '0'; -- do not dispense gatorade
+        change_back <= '0'; -- do not dispense change
+      end if;
+    end if;
+  end process;
 
--- output logic for change being put back
-changeback : PROCESS(clk)
-BEGIN
-	if(rising_edge(clk)) THEN
-	    if(next_state = excess) THEN
-		     change_back <= '1';
-		 elsif(next_state = change) THEN
-		     change_back <= '1';
-		 ELSE
-		     change_back <= '0';
-		 end if;
-	end if;
-end process;
+  --output logic for when dime is inserted
+  out_quarter : process (clk)
+  begin
+    if (rising_edge(clk)) then
+      if (next_state = quarter) then
+        money       <= money + cent_25; --add 25 cents to the money counter
+        gatorade    <= '0'; -- do not dispense gatorade
+        change_back <= '0'; -- do not dispense change
+      end if;
+    end if;
+  end process;
+
+  --output logic for when there is enough 
+  enough_state : process (clk)
+  begin
+    if (rising_edge(clk)) then
+      if (next_state = enough) then
+        gatorade    <= '0'; -- do not dispense gatorade
+        change_back <= '0'; -- do not dispense change
+      end if;
+    end if;
+  end process;
+
+  --output logic for excess coins
+  excess_state : process (clk)
+  begin
+    if (rising_edge(clk)) then
+      if (next_state = excess) then
+        gatorade    <= '0'; -- do not dispense gatorade
+        change_back <= '1'; -- turn on change back
+      end if;
+    end if;
+  end process;
+
+  --output logic for vending
+  vending_state : process (clk)
+  begin
+    if (rising_edge(clk)) then
+      if (next_state = vend) then
+        money       <= money - cent_75; --remove 75 cents since we vended and there is enough
+        gatorade    <= '1'; -- do not dispense gatorade
+        change_back <= '0'; -- do not dispense change
+      end if;
+    end if;
+  end process;
+
+  --output logic for change
+  change_state : process (clk)
+  begin
+    if (rising_edge(clk)) then
+      if (next_state = Change) then
+        money       <= "0000000"; --set money to 0 
+        gatorade    <= '0'; -- do not dispense gatorade
+        change_back <= '1'; -- dispense all change
+      end if;
+    end if;
+  end process;
   --calculate tens and ones place to display money.
   tens_output <= money / cent_10; --using cent_10 as a const since it is just binary 10
   ones_output <= money rem cent_10;

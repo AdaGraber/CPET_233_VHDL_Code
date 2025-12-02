@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'Coin_return'
+Slack : -8.965
+TNS   : -63.460
+
+Type  : Slow 1100mV 85C Model Setup 'clk'
+Slack : -6.366
+TNS   : -106.151
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : 0.487
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'Coin_return'
+Slack : 1.032
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.538
+TNS   : -14.636
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Coin_return'
+Slack : 0.036
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'Coin_return'
+Slack : -8.771
+TNS   : -62.904
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : -6.181
+TNS   : -102.720
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : 0.516
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'Coin_return'
+Slack : 0.916
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.538
+TNS   : -14.294
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Coin_return'
+Slack : 0.028
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'Coin_return'
+Slack : -4.084
+TNS   : -27.373
+
+Type  : Fast 1100mV 85C Model Setup 'clk'
+Slack : -4.040
+TNS   : -63.778
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'Coin_return'
+Slack : 0.599
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.274
+TNS   : -4.948
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Coin_return'
+Slack : -0.135
+TNS   : -0.881
+
+Type  : Fast 1100mV 0C Model Setup 'Coin_return'
+Slack : -3.723
+TNS   : -25.246
+
+Type  : Fast 1100mV 0C Model Setup 'clk'
+Slack : -3.502
+TNS   : -55.333
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : 0.180
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'Coin_return'
+Slack : 0.513
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.262
+TNS   : -4.743
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Coin_return'
+Slack : -0.112
+TNS   : -0.786
+
+------------------------------------------------------------
